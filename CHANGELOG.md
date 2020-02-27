@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/roborox/rxjs-react/compare/v1.0.2...v1.0.3) (2020-02-27)
+
+
+### Bug Fixes
+
+* RxBool tests + negate ([d2beb85](https://github.com/roborox/rxjs-react/commit/d2beb85b538fe37d9e20af9b00b77be205799281))
+* upgrade deps ([c6043c6](https://github.com/roborox/rxjs-react/commit/c6043c68002875dc91c89822527fae1f5db18570))
+
 ## [1.0.2](https://github.com/roborox/rxjs-react/compare/v1.0.1...v1.0.2) (2020-02-27)
 
 
