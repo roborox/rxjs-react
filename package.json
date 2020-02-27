@@ -45,8 +45,8 @@
     "typescript": "3.7.5",
     "@grammarly/focal": "^0.8.1",
     "rxjs": "^6.5.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "peerDependencies": {
     "rxjs": ">= 6.5.0",
