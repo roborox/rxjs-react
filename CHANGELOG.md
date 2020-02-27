@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/roborox/rxjs-react/compare/v1.0.1...v1.0.2) (2020-02-27)
+
+
+### Bug Fixes
+
+* removed unneeded peer dependency ([8219570](https://github.com/roborox/rxjs-react/commit/8219570fbfc03c9d95f4b39a5b5d0894af15dbe1))
+
 ## [1.0.1](https://github.com/roborox/rxjs-react/compare/v1.0.0...v1.0.1) (2020-02-27)
 
 
