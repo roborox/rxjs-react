@@ -1,14 +1,18 @@
 import React from "react"
-import {render} from "@testing-library/react"
-import {Atom} from "@grammarly/focal/dist/_cjs/src/atom"
-import {RxBool} from "./rx-bool"
-import {act} from "react-dom/test-utils"
+import { render } from "@testing-library/react"
+import { Atom } from "@grammarly/focal/dist/_cjs/src/atom"
+import { RxBool } from "./rx-bool"
+import { act } from "react-dom/test-utils"
 
 let counter = 0
 
 function Count() {
 	counter = counter + 1
 	return <span data-testid="value">text</span>
+}
+
+function Test({value}: {value: string}) {
+	return <span data-testid="value">{value}</span>
 }
 
 describe("RxBool", () => {
@@ -40,4 +44,13 @@ describe("RxBool", () => {
 		act(() => bool.set(true))
 		await expect(r.findByTestId("value")).rejects.toBeTruthy()
 	})
+
+	test("should render not if not true", () => {
+		const bool = Atom.create<boolean>(true)
+		const r = render(<RxBool value={bool} not={() => <Test value="false"/>}><Test value="true"/></RxBool>)
+		expect(r.getByTestId("value")).toHaveTextContent("true")
+		act(() => bool.set(false))
+		expect(r.getByTestId("value")).toHaveTextContent("false")
+	})
+
 })
