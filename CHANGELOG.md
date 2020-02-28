@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/roborox/rxjs-react/compare/v1.0.5...v1.0.6) (2020-02-28)
+
+
+### Bug Fixes
+
+* toRx from Promise ([afc27ee](https://github.com/roborox/rxjs-react/commit/afc27eebb40cdcb62018313b4dbcff6ada73cc35))
+
 ## [1.0.5](https://github.com/roborox/rxjs-react/compare/v1.0.4...v1.0.5) (2020-02-28)
 
 
