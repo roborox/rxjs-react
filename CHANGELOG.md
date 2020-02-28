@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/roborox/rxjs-react/compare/v1.0.6...v1.0.7) (2020-02-28)
+
+
+### Bug Fixes
+
+* Loading component moved from focal-utils ([5e8ffcb](https://github.com/roborox/rxjs-react/commit/5e8ffcbde036eaef3e3d29e3edeecb95eb70f42c))
+
 ## [1.0.6](https://github.com/roborox/rxjs-react/compare/v1.0.5...v1.0.6) (2020-02-28)
 
 
