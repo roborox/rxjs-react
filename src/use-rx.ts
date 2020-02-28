@@ -11,10 +11,10 @@ export function useRx<T>(observable: Observable<T>, initial: T): T
 export function useRx<T>(observable: Observable<T>, initial?: T): T | null {
 	const [state, setState] = useState<T | null>(() => {
 		let initialState: T | null = null
-		if (initial !== undefined) {
-			initialState = initial
-		} else if ((observable as any)["get"] !== undefined) {
+		if ((observable as any)["get"] !== undefined) {
 			initialState = (observable as any).get()
+		} else if (initial !== undefined) {
+			initialState = initial
 		}
 		return initialState
 	})
