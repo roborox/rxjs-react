@@ -11,6 +11,16 @@ const RxText = ({value, renders}: { value: Observable<string>, renders: Atom<num
 	return <span data-testid="value">{simple}</span>
 }
 
+let count = 0
+const Count = () => {
+	count = count + 1
+	return <span>test</span>
+}
+const TestCount = (props: { value: Observable<number> }) => {
+	useRx(props.value)
+	return <Count/>
+}
+
 describe("useRx", () => {
 	test("should render atom exactly one time", () => {
 		const text = Math.random().toString()
@@ -41,4 +51,14 @@ describe("useRx", () => {
 		expect(r.getByTestId("value")).toHaveTextContent(nextText)
 		expect(renders.get()).toStrictEqual(2)
 	})
+
+	test("should not trigger rerender if not changed", () => {
+		const subject = new ReplaySubject<number>(1)
+		subject.next(1)
+		render(<TestCount value={subject}/>)
+		expect(count).toBe(2)
+		act(() => subject.next(1))
+		expect(count).toBe(2)
+	})
+
 })
