@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/roborox/rxjs-react/compare/v1.0.3...v1.0.4) (2020-02-28)
+
+
+### Bug Fixes
+
+* not for RxBool ([188398a](https://github.com/roborox/rxjs-react/commit/188398aeaf0696cea8299f9686e01da601a4c73a))
+* useRx get fix ([9f4b794](https://github.com/roborox/rxjs-react/commit/9f4b794b87efb547df4fd7a9c95a2a079ed3c43e))
+
 ## [1.0.3](https://github.com/roborox/rxjs-react/compare/v1.0.2...v1.0.3) (2020-02-27)
 
 
