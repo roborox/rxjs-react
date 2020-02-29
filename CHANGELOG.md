@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/roborox/rxjs-react/compare/v1.0.8...v1.0.9) (2020-02-29)
+
+
+### Bug Fixes
+
+* add LiftedProps type ([532b611](https://github.com/roborox/rxjs-react/commit/532b611b51a15f8d9d470b86536c4a01369bd5d1))
+
 ## [1.0.8](https://github.com/roborox/rxjs-react/compare/v1.0.7...v1.0.8) (2020-02-29)
 
 
