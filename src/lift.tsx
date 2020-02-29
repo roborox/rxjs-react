@@ -6,10 +6,12 @@ type Observed<T> = {
 	[K in keyof T]: Observable<T[K]>;
 }
 
+export type LiftedProps<Props, K extends keyof Props> = Omit<Props, K> & Observed<Pick<Props, K>>
+
 export function lift<Props, K extends keyof Props>(
 	Component: React.ComponentType<Props>,
 	key: K,
-): React.FC<Omit<Props, K> & Observed<Pick<Props, K>>> {
+): React.FC<LiftedProps<Props, K>> {
 	return (props) => {
 		// @ts-ignore
 		const value = useRx(props[key] as Observable<Props[K]>)
