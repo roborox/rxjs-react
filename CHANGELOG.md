@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/roborox/rxjs-react/compare/v1.0.7...v1.0.8) (2020-02-29)
+
+
+### Bug Fixes
+
+* RxBool renamed to RxIf, better children type ([85669bd](https://github.com/roborox/rxjs-react/commit/85669bdc374156d0b8e89569620ad379a0b1c6d4))
+
 ## [1.0.7](https://github.com/roborox/rxjs-react/compare/v1.0.6...v1.0.7) (2020-02-28)
 
 
