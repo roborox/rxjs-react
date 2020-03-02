@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/roborox/rxjs-react/compare/v1.0.9...v1.0.10) (2020-03-02)
+
+
+### Bug Fixes
+
+* simplier type for lift ([0f97e45](https://github.com/roborox/rxjs-react/commit/0f97e45606d707e1228d38839f26b4c5c162abdc))
+
 ## [1.0.9](https://github.com/roborox/rxjs-react/compare/v1.0.8...v1.0.9) (2020-02-29)
 
 
