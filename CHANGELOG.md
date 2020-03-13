@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/roborox/rxjs-react/compare/v1.0.10...v1.1.0) (2020-03-13)
+
+
+### Features
+
+* toRx returns tuple, LoadingStatus, Loader improved ([464ea86](https://github.com/roborox/rxjs-react/commit/464ea860a0a7573a83803d15de39e46abc09f5df))
+
 ## [1.0.10](https://github.com/roborox/rxjs-react/compare/v1.0.9...v1.0.10) (2020-03-02)
 
 
