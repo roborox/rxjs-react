@@ -20,9 +20,7 @@ export function useRx<T>(observable: Observable<T>, initial?: T): T | null {
 	})
 	useEffect(() => {
 		const subscription = observable.subscribe(setState)
-		return () => {
-			subscription.unsubscribe()
-		}
-	}, [])
+		return () => subscription.unsubscribe()
+	}, [observable])
 	return state
 }
