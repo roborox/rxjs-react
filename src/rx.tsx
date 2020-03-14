@@ -4,13 +4,15 @@ import { useRx } from "./use-rx"
 
 interface Props<T> {
 	value: Observable<T>
-	children: (t: T) => ReactNode
+	children?: (t: T) => ReactNode
 }
 
 export function Rx<T>({value, children}: Props<T>) {
 	const simple = useRx(value)
-	if (simple !== null) {
+	if (simple !== null && children !== undefined) {
 		return <>{children(simple)}</>
+	} else if (simple !== null) {
+		return <>{simple}</>
 	}
 	return null
 }
