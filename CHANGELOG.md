@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/roborox/rxjs-react/compare/v1.1.0...v1.1.1) (2020-03-14)
+
+
+### Bug Fixes
+
+* Rx component can render components without children ([a1737b4](https://github.com/roborox/rxjs-react/commit/a1737b49612f4ef1e5b6b88b7932a0165c27e68e))
+
 # [1.1.0](https://github.com/roborox/rxjs-react/compare/v1.0.10...v1.1.0) (2020-03-13)
 
 
