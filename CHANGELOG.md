@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/roborox/rxjs-react/compare/v1.1.1...v1.1.2) (2020-03-14)
+
+
+### Bug Fixes
+
+* fix subscription handling in useRx ([e3ed226](https://github.com/roborox/rxjs-react/commit/e3ed22639134cc2677310218f6e197a68104e217))
+
 ## [1.1.1](https://github.com/roborox/rxjs-react/compare/v1.1.0...v1.1.1) (2020-03-14)
 
 
