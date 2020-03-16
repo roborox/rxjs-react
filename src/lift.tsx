@@ -6,22 +6,26 @@ type Observed<T> = {
 	[K in keyof T]: Observable<T[K]>;
 }
 
-export type LiftedProps<Props, K extends keyof Props> = Omit<Props, K> & Observed<Pick<Props, K>>
+export type LiftedProps<Props extends Record<string, any>, K extends keyof Props> =
+	& Omit<Props, K>
+	& Observed<Pick<Props, K>>
 
-export function lift<Props, K extends keyof Props>(
-	Component: React.ComponentType<Props>,
-	key: K,
-): (props: LiftedProps<Props, K>) => React.ReactElement | null {
-	return (props) => {
-		// @ts-ignore
+export function lift<Props extends Record<string, any>, K extends keyof Props>(
+	Component: React.ComponentType<Props>, key: K,
+) {
+	const originalName = Component.displayName || Component.name || "Unknown"
+	function LiftedComponent(props: Props) {
 		const value = useRx(props[key] as Observable<Props[K]>)
 		if (value !== null) {
-			const resultProps = {...props}
+			const resultProps = { ...props }
 			resultProps[key] = value
-			// @ts-ignore
-			return <Component {...resultProps}/>
+
+			return <Component {...resultProps as Props} />
 		} else {
 			return null
 		}
 	}
+
+	LiftedComponent.displayName = `lifted(${originalName})`
+	return LiftedComponent as React.FC<LiftedProps<Props, K>>
 }
