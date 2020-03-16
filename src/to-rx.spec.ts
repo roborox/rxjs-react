@@ -1,4 +1,5 @@
-import { LoadingStatus, toRx } from "./to-rx"
+import { toRx } from "./to-rx"
+import { LoadingStatus } from "./loading-state"
 
 describe("toRx", () => {
 	test("should emit 2 states", async () => {
@@ -32,7 +33,7 @@ describe("toRx", () => {
 		let events: LoadingStatus[] = []
 		const [,status] = toRx(promise)
 		status.subscribe(next => events.push(next))
-		await promise.catch(ex => Promise.resolve())
+		await promise.catch(() => Promise.resolve())
 		expect(events.length).toBe(2)
 		expect(events[0].status).toBe("loading")
 		expect(events[1].status).toBe("error")

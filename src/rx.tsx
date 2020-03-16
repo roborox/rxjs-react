@@ -1,18 +1,17 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { Observable } from "rxjs"
 import { useRx } from "./use-rx"
 
-interface Props<T> {
+export interface RxProps<T> {
 	value: Observable<T>
-	children?: (t: T) => ReactNode
+	children: (t: T) => React.ReactNode
 }
 
-export function Rx<T>({value, children}: Props<T>) {
+export function Rx<T>({ value, children }: RxProps<T>): React.ReactElement | null {
 	const simple = useRx(value)
-	if (simple !== null && children !== undefined) {
+
+	if (simple) {
 		return <>{children(simple)}</>
-	} else if (simple !== null) {
-		return <>{simple}</>
 	}
 	return null
 }

@@ -1,19 +1,6 @@
 import { Observable, ReplaySubject } from "rxjs"
-
-export type LoadingStatusIdle = { status: "idle" }
-export type LoadingStatusSuccess = { status: "success" }
-export type LoadingStatusLoading = { status: "loading" }
-export type LoadingStatusError = { status: "error", error: any }
-export type LoadingStatus = LoadingStatusIdle | LoadingStatusLoading | LoadingStatusSuccess | LoadingStatusError
-
-export const loadingStatusIdle: LoadingStatusIdle = {status: "idle"}
-export const loadingStatusLoading: LoadingStatusLoading = {status: "loading"}
-export const loadingStatusSuccess: LoadingStatusSuccess = {status: "success"}
-
-export interface LoadingState<T> {
-	value: T
-	status: LoadingStatus
-}
+import { loadingStatusLoading, loadingStatusSuccess } from "."
+import { LoadingStatus, createLoadingStatusError } from "./loading-state"
 
 export function toRx<T>(promise: Promise<T>): [Observable<T>, Observable<LoadingStatus>] {
 	const result = new ReplaySubject<T>(1)
@@ -24,6 +11,6 @@ export function toRx<T>(promise: Promise<T>): [Observable<T>, Observable<Loading
 			result.next(x)
 			status.next(loadingStatusSuccess)
 		})
-		.catch(e => status.next({status: "error", error: e}))
+		.catch(e => status.next(createLoadingStatusError(e)))
 	return [result, status]
 }
