@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/roborox/rxjs-react/compare/v1.1.2...v1.2.0) (2020-03-17)
+
+
+### Bug Fixes
+
+* fix index file ([eb43d9c](https://github.com/roborox/rxjs-react/commit/eb43d9cf846e56ca18562406731e27229de12f4d))
+* fix lift HOC ([de9cf94](https://github.com/roborox/rxjs-react/commit/de9cf945d879a804035da4ff2080ed75e99c8095))
+
+
+### Features
+
+* expose modules with index file, enhance loading states api ([20d528d](https://github.com/roborox/rxjs-react/commit/20d528da10013f8d1a48969580cbb878fcf4104c))
+
 ## [1.1.2](https://github.com/roborox/rxjs-react/compare/v1.1.1...v1.1.2) (2020-03-14)
 
 
