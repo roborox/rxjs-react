@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/roborox/rxjs-react/compare/v1.2.1...v1.2.2) (2020-03-17)
+
+
+### Bug Fixes
+
+* revert support empty children for Rx ([e3a7549](https://github.com/roborox/rxjs-react/commit/e3a7549cb60988e7c3c23daf7b8898d1e506ea74))
+
 ## [1.2.1](https://github.com/roborox/rxjs-react/compare/v1.2.0...v1.2.1) (2020-03-17)
 
 
