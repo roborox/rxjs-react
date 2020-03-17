@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/roborox/rxjs-react/compare/v1.2.0...v1.2.1) (2020-03-17)
+
+
+### Bug Fixes
+
+* fix import issue ([a38fdd0](https://github.com/roborox/rxjs-react/commit/a38fdd099da393f0b351b7839f115c203c01dc9a))
+* Rx supports optional children for simple types: number, string, ReactElement ([f2b53b8](https://github.com/roborox/rxjs-react/commit/f2b53b8ada4d761bfbf6ebeb8df532f577e68917))
+
 # [1.2.0](https://github.com/roborox/rxjs-react/compare/v1.1.2...v1.2.0) (2020-03-17)
 
 
