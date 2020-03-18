@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/roborox/rxjs-react/compare/v1.2.2...v1.2.3) (2020-03-18)
+
+
+### Bug Fixes
+
+* improve test performance ([f51f6b8](https://github.com/roborox/rxjs-react/commit/f51f6b818681e9510fbc0663f58f5df63c3bd243))
+* simplify LoadingState ([374d488](https://github.com/roborox/rxjs-react/commit/374d4885ff60b94efe0e7c59d4c60fc8ed43837b))
+
 ## [1.2.2](https://github.com/roborox/rxjs-react/compare/v1.2.1...v1.2.2) (2020-03-17)
 
 
