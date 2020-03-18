@@ -22,31 +22,17 @@ export const loadingStatusLoading: LoadingStatusLoading = {
 export const loadingStatusSuccess: LoadingStatusSuccess = {
 	status: "success",
 }
-export const createLoadingStatusError = <T extends any>(error: T): LoadingStatusError => ({
+export const createLoadingStatusError = <T>(error: T): LoadingStatusError => ({
 	status: "error",
 	error,
 })
 
-export type SuccessLoadingState<T> = {
-	value: T,
-	status: LoadingStatusSuccess
-}
-export type LoadingStateIdle = {
-	value: null,
-	status: LoadingStatusIdle
-}
-export type LoadingStateError = {
-	value: null,
-	status: LoadingStatusError
-}
-export type LoadingStateLoading = {
-	value: null,
-	status: LoadingStatusLoading
+export type LoadingState<T> = {
+	value: T
+	status: LoadingStatus
 }
 
-export type LoadingState<T> = LoadingStateLoading | SuccessLoadingState<T> | LoadingStateIdle | LoadingStateError
-
-export const createLoadingStateIdle = <T extends any>(): LoadingState<T> => ({
+export const createLoadingStateIdle = <T>(emptyValue: T): LoadingState<T> => ({
 	status: loadingStatusIdle,
-	value: null,
+	value: emptyValue,
 })

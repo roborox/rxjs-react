@@ -9,7 +9,7 @@ export type Cases<R> = {
 	success: R
 }
 
-export const caseWhen = <R extends any>(
+export const caseWhen = <R>(
 	status: Observable<LoadingStatus>, cases: Cases<R>,
 ): Observable<R | null> => {
 	return status.pipe(
